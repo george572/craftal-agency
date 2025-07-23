@@ -1,0 +1,21 @@
+{
+  "name": "craftal-agency-website",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npx tailwindcss -i ./src/input.css -o ./src/output.css --watch\" \"npx @11ty/eleventy --serve --watch\"",
+    "build": "npx tailwindcss -i ./src/input.css -o ./src/output.css && npx @11ty/eleventy"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@tailwindcss/cli": "^4.1.11",
+    "tailwindcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  }
+}
