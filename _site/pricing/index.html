@@ -1,4 +1,20 @@
-<header>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - Craftal Web Design Agency</title>
+    
+    <!-- Preload critical fonts -->
+    <link rel="preload" href="/src/fonts/Satoshi-Regular.otf" as="font" type="font/otf" crossorigin>
+    <link rel="preload" href="/src/fonts/Satoshi-Medium.otf" as="font" type="font/otf" crossorigin>
+    <link rel="preload" href="/src/fonts/Satoshi-Bold.otf" as="font" type="font/otf" crossorigin>
+    
+    <link href="/src/output.css" rel="stylesheet" type="text/css">
+    <script src="/src/js/app.js" defer type="text/javascript"></script>
+</head>
+<body>
+    <header>
     <div class="flex justify-between items-center max-w-[1439px] mx-auto px-3 md:px-7 py-4">
         <div class="flex items-center">
             <a href="/">
@@ -6,13 +22,13 @@
             </a>
         </div>
         <nav class="hidden md:flex items-center gap-8 text-[#515A6E] font-medium text-[14px]">
-            <a href="/about/" class="{% if page.url == '/about/' %}text-primary{% endif %}">About</a>
+            <a href="/about/" class="">About</a>
             <div class="menuItem flex items-center gap-1 group relative">
                 <span class="flex items-center gap-1 cursor-pointer">
-                    <span class="{% if page.url == '/ecommerce/' or page.url == '/landing-page/' or page.url == '/website-redesign/' %}text-primary{% endif %}">Services</span>
+                    <span class="">Services</span>
                     <img src="../../src/images/chevron-down.svg" alt="Arrow Down" class="arrow w-4 h-4 transition-transform duration-180">
                 </span>
-                {# dropdown menu #}
+                
                 <div class="dropdown hidden text-[14px] w-[150px] absolute bg-white shadow-sm rounded-md px-2 py-3 -left-5 -bottom-35
                         opacity-0 transition-opacity duration-200 flex-col">
                     <a href="/ecommerce/" class="pb-3">E-commerce Site</a>
@@ -21,22 +37,22 @@
                     <div class="bg-primary h-[7px] absolute w-full left-0 bottom-0 rounded-bl-md rounded-br-md"></div>
                 </div>
             </div>
-            <a href="/pricing/" class="{% if page.url == '/pricing/' %}text-primary{% endif %}">Pricing</a>
-            <a href="/contact/" class="{% if page.url == '/contact/' %}text-primary{% endif %}">Contact Us</a>
+            <a href="/pricing/" class="text-primary">Pricing</a>
+            <a href="/contact/" class="">Contact Us</a>
         </nav>
         <a
             href="/contact/"
             class="hidden md:flex bg-primary w-[100px] h-[40px] rounded-4xl text-[14px] text-center items-center justify-center
                 text-white font-semibold">
             Get Started</a>
-        {# responsive #}
-        {# hamburger icon #}
+        
+        
         <div class="md:hidden flex flex-col items-center justify-center gap-1 w-[17px] hamburger">
             <span class="w-full h-[2px] bg-black block rounded-md"></span>
             <span class="w-full h-[2px] bg-black block rounded-md"></span>
             <span class="w-full h-[2px] bg-black block rounded-md"></span>
         </div>
-        {# mobile menu #}
+        
         <div class="mobile-menu md:hidden w-[0] fixed top-0 left-0 z-10  bg-black/70 backdrop-blur-sm">
             <div class="mobile-menu-content md:hidden overflow-hidden w-[0] transition-all duration-300 shadow-md h-[100vh] bg-white ">
                 <div class="flex flex-col ">
@@ -51,15 +67,15 @@
                                 stroke-linejoin="round"/>
                         </svg>
                     </div>
-                    {# menu items #}
+                    
                     <div class="flex flex-col mt-10 gap-10 px-3">
-                        <a href="/about/" class="{% if page.url == '/about/' %}text-primary {% endif %}">About</a>
+                        <a href="/about/" class="">About</a>
                         <div class="responsive-menu-item flex flex-col items-start gap-1 group relative">
                             <span class="flex items-center gap-1 cursor-pointer">
-                                <span class="{% if page.url == '/ecommerce/' or page.url == '/landing-page/' or page.url == '/website-redesign/' %}text-primary {% endif %}">Services</span>
+                                <span class="">Services</span>
                                 <img src="../../src/images/chevron-down.svg" alt="Arrow Down" class="arrow-responsive w-4 h-4 transition-transform duration-180">
                             </span>
-                            {# dropdown menu #}
+                            
                             <div class="responsive-dropdown h-[0] overflow-hidden text-[14px] w-full bg-white shadow-sm rounded-md 
                                     duration-200 flex flex-col">
                                 <a href="/ecommerce/" class="pb-3">E-commerce Site</a>
@@ -68,8 +84,8 @@
                                 <div class="decoration hidden bg-primary h-[7px] absolute w-full left-0 bottom-0 rounded-bl-md rounded-br-md"></div>
                             </div>
                         </div>
-                        <a href="/pricing/" class="{% if page.url == '/pricing/' %}text-primary {% endif %}">Pricing</a>
-                        <a href="/contact/" class="{% if page.url == '/contact/' %}text-primary {% endif %}">Contact Us</a>
+                        <a href="/pricing/" class="text-primary ">Pricing</a>
+                        <a href="/contact/" class="">Contact Us</a>
                     </div>
                     <a
                         href="/contact/"
@@ -81,3 +97,20 @@
         </div>
     </div>
 </header>
+
+    <main class="max-w-[1439px] mx-auto px-3 md:px-7 py-8">
+        <h1 class="text-4xl font-bold text-center mb-8">Our Pricing</h1>
+        <p class="text-lg text-center max-w-2xl mx-auto">
+            Choose the perfect plan for your business needs.
+        </p>
+    </main>
+
+    <footer class="bg-gray-50 mt-16">
+    <div class="max-w-[1439px] mx-auto px-3 md:px-7 py-8">
+        <div class="text-center">
+            <p class="text-gray-600 text-sm">&copy; 2024 Craftal Web Design Agency. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html> 

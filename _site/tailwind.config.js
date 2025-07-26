@@ -9,8 +9,8 @@ module.exports = {
     theme: { 
       extend: {
         fontFamily: {
-          'sans': ['Satoshi', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
-          'satoshi': ['Satoshi', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+          'sans': ['Satoshi', 'sans-serif'],
+          'satoshi': ['Satoshi', 'sans-serif'],
         },
         colors: {
           primary: "#447DFC",

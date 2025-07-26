@@ -1,1 +1,227 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./fonts/Satoshi-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./fonts/Satoshi-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./fonts/Satoshi-Bold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('./fonts/Satoshi-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+
+/* Font fallback optimization */
+@supports (font-display: optional) {
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('./fonts/Satoshi-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: optional;
+  }
+  
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('./fonts/Satoshi-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: optional;
+  }
+  
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('./fonts/Satoshi-Bold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: optional;
+  }
+  
+  @font-face {
+    font-family: 'Satoshi';
+    src: url('./fonts/Satoshi-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: optional;
+  }
+}
+
+:root {
+  --font-sans: 'Satoshi', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --color-primary: #447DFC;
+  --color-secondary: #1a1a1a;
+  --color-accent: #ff6b35;
+}
+
+html {
+  font-family: var(--font-sans);
+  /* Prevent layout shift during font loading */
+  font-size-adjust: 0.5;
+}
+
+/* Prevent font loading layout shift */
+body {
+  font-family: var(--font-sans);
+  /* Ensure consistent line height during font loading */
+  line-height: 1.5;
+}
+
+/* Prevent layout shift during font loading */
+* {
+  font-display: block;
+}
+
+/* Optimize font loading for headings */
+h1, h2, h3, h4, h5, h6 {
+  font-display: block;
+  font-family: var(--font-sans);
+}
+
+/* Prevent cumulative layout shift */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure consistent spacing during font loading */
+p, span, div, a {
+  font-family: var(--font-sans);
+}
+
+/* Optimize font loading for navigation */
+nav, nav * {
+  font-display: block;
+  font-family: var(--font-sans);
+}
+
+/* Ensure consistent page layout */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Prevent layout shift on page transitions */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Ensure consistent spacing */
+.page-content {
+  min-height: calc(100vh - 200px); /* Adjust based on header/footer height */
+}
+
+/* Prevent scroll jumps on page load */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 0;
+}
+
+/* Prevent automatic scroll restoration */
+body {
+  scroll-behavior: auto;
+}
+
+/* Ensure headings don't cause scroll jumps */
+h1, h2, h3, h4, h5, h6 {
+  scroll-margin-top: 0;
+  scroll-padding-top: 0;
+}
+
+/* Prevent layout shift on large text */
+.text-4xl {
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Ensure consistent page height */
+html, body {
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Prevent scroll restoration on page load */
+html {
+  scroll-behavior: auto !important;
+}
+
+/* Prevent any automatic scrolling */
+body {
+  scroll-behavior: auto !important;
+  overflow-anchor: none;
+}
+
+/* Ensure no scroll jumps on page transitions */
+* {
+  scroll-behavior: auto !important;
+}
+
+/* Prevent navigation layout shifts */
+nav a, nav span {
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+  min-width: fit-content;
+}
+
+/* Ensure active navigation links don't cause layout shifts */
+nav a.text-primary, nav span.text-primary {
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  line-height: 1.4 !important;
+}
+
+/* Prevent any font loading issues in navigation */
+nav * {
+  font-display: block !important;
+  font-family: var(--font-sans) !important;
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.bg-accent {
+  background-color: var(--color-accent);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}

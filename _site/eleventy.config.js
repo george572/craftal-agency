@@ -6,7 +6,7 @@ export default function(eleventyConfig) {
   // Copy fonts to output
   eleventyConfig.addPassthroughCopy("src/fonts");
   // Copy JavaScript files to output
-  eleventyConfig.addPassthroughCopy("src/js");
+  eleventyConfig.addPassthroughCopy("*.js");
   
   return {
     dir: {
