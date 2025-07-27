@@ -238,3 +238,11 @@ nav * {
 .text-accent {
   color: var(--color-accent);
 }
+
+
+.what-we-do-bg {
+  background-image: url('/src/images/what-we-do-bg.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
