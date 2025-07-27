@@ -316,6 +316,9 @@
   .h-\[83px\] {
     height: 83px;
   }
+  .h-\[100px\] {
+    height: 100px;
+  }
   .h-\[100vh\] {
     height: 100vh;
   }
@@ -357,6 +360,9 @@
   }
   .w-\[100px\] {
     width: 100px;
+  }
+  .w-\[148px\] {
+    width: 148px;
   }
   .w-\[150px\] {
     width: 150px;

@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const responsiveDropdown = document.querySelector(".responsive-dropdown");
   const decoration = document.querySelector(".decoration");
   const arrowResponsive = document.querySelector(".arrow-responsive");
+  const arrowSvg = document.querySelector(".arrow-svg");
   let showTimeout;
   let hideTimeout;
 
@@ -223,4 +224,19 @@ document.addEventListener('DOMContentLoaded', function() {
             }, "<");
         }
     });
+});
+
+// Arrow SVG infinite rotation animation
+document.addEventListener('DOMContentLoaded', function() {
+    const arrowSvg = document.querySelector(".arrow-svg");
+    
+    if (arrowSvg) {
+        gsap.to(arrowSvg, {
+            rotation: "15",
+            duration: 1.5,
+            ease: "power2.inOut",
+            yoyo: true,
+            repeat: -1
+        });
+    }
 });
