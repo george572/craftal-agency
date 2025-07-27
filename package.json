@@ -8,6 +8,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "concurrently \"npx tailwindcss -i ./src/input.css -o ./src/output.css --watch\" \"npx @11ty/eleventy --serve --watch\"",
+    "dev:network": "concurrently \"npx tailwindcss -i ./src/input.css -o ./src/output.css --watch\" \"npx @11ty/eleventy --serve --watch --host=0.0.0.0\"",
     "build": "npx tailwindcss -i ./src/input.css -o ./src/output.css && npx @11ty/eleventy"
   },
   "dependencies": {
