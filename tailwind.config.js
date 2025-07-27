@@ -6,6 +6,20 @@ module.exports = {
       "./src/**/*.html",
       "./_site/**/*.html"
     ],
+    safelist: [
+      'rounded-xl',
+      'rounded-2xl', 
+      'rounded-3xl',
+      'rounded-full',
+      'bg-gradient-to-b',
+      'bg-gradient-to-t',
+      'bg-gradient-to-l',
+      'bg-gradient-to-r',
+      'from-[#EEF4FF]',
+      'to-white',
+      'h-[80vh]',
+      'h-[100vh]'
+    ],
     theme: { 
       extend: {
         fontFamily: {
