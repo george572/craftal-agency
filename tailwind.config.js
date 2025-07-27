@@ -18,13 +18,15 @@ module.exports = {
       'from-[#EEF4FF]',
       'to-white',
       'h-[80vh]',
-      'h-[100vh]'
+      'h-[100vh]',
+      'font-jakarta'
     ],
     theme: { 
       extend: {
         fontFamily: {
           'sans': ['Satoshi', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
           'satoshi': ['Satoshi', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+          'jakarta': ['Plus Jakarta Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
         },
         colors: {
           primary: "#447DFC",
