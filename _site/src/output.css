@@ -206,6 +206,9 @@
   .right-1 {
     right: calc(var(--spacing) * 1);
   }
+  .right-3 {
+    right: calc(var(--spacing) * 3);
+  }
   .right-4 {
     right: calc(var(--spacing) * 4);
   }
@@ -298,6 +301,12 @@
   }
   .mt-40 {
     margin-top: calc(var(--spacing) * 40);
+  }
+  .mb-3 {
+    margin-bottom: calc(var(--spacing) * 3);
+  }
+  .mb-5 {
+    margin-bottom: calc(var(--spacing) * 5);
   }
   .mb-7 {
     margin-bottom: calc(var(--spacing) * 7);
@@ -425,6 +434,9 @@
   .max-w-\[448px\] {
     max-width: 448px;
   }
+  .max-w-\[535px\] {
+    max-width: 535px;
+  }
   .max-w-\[558px\] {
     max-width: 558px;
   }
@@ -446,8 +458,14 @@
   .max-w-\[1179px\] {
     max-width: 1179px;
   }
+  .max-w-\[1248px\] {
+    max-width: 1248px;
+  }
   .max-w-\[1280px\] {
     max-width: 1280px;
+  }
+  .max-w-\[1368px\] {
+    max-width: 1368px;
   }
   .max-w-\[1377px\] {
     max-width: 1377px;
@@ -541,6 +559,9 @@
   }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
+  }
+  .gap-27 {
+    gap: calc(var(--spacing) * 27);
   }
   .overflow-hidden {
     overflow: hidden;
@@ -676,6 +697,9 @@
   }
   .px-4 {
     padding-inline: calc(var(--spacing) * 4);
+  }
+  .px-7 {
+    padding-inline: calc(var(--spacing) * 7);
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
@@ -868,6 +892,11 @@
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
     transition-duration: var(--tw-duration, var(--default-transition-duration));
   }
+  .transition-colors {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
   .transition-opacity {
     transition-property: opacity;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -942,6 +971,11 @@
   .md\:mx-3 {
     @media (width >= 48rem) {
       margin-inline: calc(var(--spacing) * 3);
+    }
+  }
+  .md\:mt-0 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 0);
     }
   }
   .md\:mt-10 {
@@ -1059,6 +1093,11 @@
       width: 580px;
     }
   }
+  .md\:max-w-\[435px\] {
+    @media (width >= 48rem) {
+      max-width: 435px;
+    }
+  }
   .md\:max-w-\[522px\] {
     @media (width >= 48rem) {
       max-width: 522px;
@@ -1084,9 +1123,19 @@
       flex-direction: row;
     }
   }
+  .md\:gap-10 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 10);
+    }
+  }
   .md\:gap-13 {
     @media (width >= 48rem) {
       gap: calc(var(--spacing) * 13);
+    }
+  }
+  .md\:gap-27 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 27);
     }
   }
   .md\:rounded-4xl {
@@ -1102,6 +1151,11 @@
   .md\:p-9 {
     @media (width >= 48rem) {
       padding: calc(var(--spacing) * 9);
+    }
+  }
+  .md\:px-0 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 0);
     }
   }
   .md\:px-7 {
@@ -1169,6 +1223,11 @@
       margin-inline: calc(var(--spacing) * 4);
     }
   }
+  .lg\:mt-0 {
+    @media (width >= 64rem) {
+      margin-top: calc(var(--spacing) * 0);
+    }
+  }
   .lg\:mt-25 {
     @media (width >= 64rem) {
       margin-top: calc(var(--spacing) * 25);
@@ -1214,6 +1273,11 @@
       max-width: 448px;
     }
   }
+  .lg\:max-w-\[535px\] {
+    @media (width >= 64rem) {
+      max-width: 535px;
+    }
+  }
   .lg\:columns-2 {
     @media (width >= 64rem) {
       columns: 2;
@@ -1237,6 +1301,16 @@
   .lg\:items-start {
     @media (width >= 64rem) {
       align-items: flex-start;
+    }
+  }
+  .lg\:px-0 {
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 0);
+    }
+  }
+  .lg\:px-7 {
+    @media (width >= 64rem) {
+      padding-inline: calc(var(--spacing) * 7);
     }
   }
   .lg\:text-left {
@@ -1272,6 +1346,16 @@
   .lg\:text-\[79px\] {
     @media (width >= 64rem) {
       font-size: 79px;
+    }
+  }
+  .xl\:gap-27 {
+    @media (width >= 80rem) {
+      gap: calc(var(--spacing) * 27);
+    }
+  }
+  .xl\:px-0 {
+    @media (width >= 80rem) {
+      padding-inline: calc(var(--spacing) * 0);
     }
   }
 }
