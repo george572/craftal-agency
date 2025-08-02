@@ -257,6 +257,9 @@
   .mx-auto {
     margin-inline: auto;
   }
+  .mt-0 {
+    margin-top: calc(var(--spacing) * 0);
+  }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
   }
@@ -292,6 +295,9 @@
   }
   .mt-25 {
     margin-top: calc(var(--spacing) * 25);
+  }
+  .mt-40 {
+    margin-top: calc(var(--spacing) * 40);
   }
   .mb-7 {
     margin-bottom: calc(var(--spacing) * 7);
@@ -352,6 +358,9 @@
   }
   .h-\[120px\] {
     height: 120px;
+  }
+  .h-\[360px\] {
+    height: 360px;
   }
   .h-\[396px\] {
     height: 396px;
@@ -425,6 +434,9 @@
   .max-w-\[643px\] {
     max-width: 643px;
   }
+  .max-w-\[670px\] {
+    max-width: 670px;
+  }
   .max-w-\[700px\] {
     max-width: 700px;
   }
@@ -437,11 +449,20 @@
   .max-w-\[1280px\] {
     max-width: 1280px;
   }
+  .max-w-\[1377px\] {
+    max-width: 1377px;
+  }
   .max-w-\[1439px\] {
     max-width: 1439px;
   }
   .max-w-full {
     max-width: 100%;
+  }
+  .flex-grow {
+    flex-grow: 1;
+  }
+  .grow {
+    flex-grow: 1;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -635,6 +656,9 @@
   .p-3 {
     padding: calc(var(--spacing) * 3);
   }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
   .p-5 {
     padding: calc(var(--spacing) * 5);
   }
@@ -725,6 +749,9 @@
   .text-\[38px\] {
     font-size: 38px;
   }
+  .text-\[44px\] {
+    font-size: 44px;
+  }
   .text-\[48px\] {
     font-size: 48px;
   }
@@ -734,6 +761,10 @@
   .leading-\[36px\] {
     --tw-leading: 36px;
     line-height: 36px;
+  }
+  .leading-\[40px\] {
+    --tw-leading: 40px;
+    line-height: 40px;
   }
   .leading-tight {
     --tw-leading: var(--leading-tight);
@@ -766,6 +797,9 @@
   }
   .text-\[\#F6F6F6\] {
     color: #F6F6F6;
+  }
+  .text-\[\#FAFAFACC\] {
+    color: #FAFAFACC;
   }
   .text-\[\#FCFBFB\] {
     color: #FCFBFB;
@@ -923,6 +957,11 @@
   .md\:mt-20 {
     @media (width >= 48rem) {
       margin-top: calc(var(--spacing) * 20);
+    }
+  }
+  .md\:mt-30 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 30);
     }
   }
   .md\:mt-40 {
@@ -1088,6 +1127,11 @@
   .md\:text-\[38px\] {
     @media (width >= 48rem) {
       font-size: 38px;
+    }
+  }
+  .md\:text-\[44px\] {
+    @media (width >= 48rem) {
+      font-size: 44px;
     }
   }
   .md\:text-\[49px\] {
