@@ -1,28 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About - Craftal Web Design Agency</title>
-    
+
     <!-- Preload critical fonts -->
-    <link rel="preload" href="/src/fonts/Satoshi-Regular.otf" as="font" type="font/otf" crossorigin>
-    <link rel="preload" href="/src/fonts/Satoshi-Medium.otf" as="font" type="font/otf" crossorigin>
-    <link rel="preload" href="/src/fonts/Satoshi-Bold.otf" as="font" type="font/otf" crossorigin>
-    
-    <link href="/src/output.css" rel="stylesheet" type="text/css">
+    <link
+      rel="preload"
+      href="/src/fonts/Satoshi-Regular.otf"
+      as="font"
+      type="font/otf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/src/fonts/Satoshi-Medium.otf"
+      as="font"
+      type="font/otf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/src/fonts/Satoshi-Bold.otf"
+      as="font"
+      type="font/otf"
+      crossorigin
+    />
+
+    <link href="/src/output.css" rel="stylesheet" type="text/css" />
     <script src="/src/js/app.js" defer type="text/javascript"></script>
-</head>
-<body>
+  </head>
+  <body>
     {% include "components/base/header.njk" %}
 
-    <main class="max-w-[1439px] mx-auto px-3 md:px-7 py-8">
-        <h1 class="text-4xl font-bold text-center mb-8">About Us</h1>
-        <p class="text-lg text-center max-w-2xl mx-auto">
-            We are a web design agency dedicated to creating beautiful, functional websites that help businesses grow.
-        </p>
+    <main
+      class="max-w-[1280px] md:max-w-[2500px] w-full mx-auto px-2 md:px-7 py-4"
+    >
+      <div
+        class="hero-section w-full px-4 flex items-center rounded-2xl md:rounded-4xl justify-start bg-gradient-to-b from-[#EEF4FF] to-white flex-col"
+      >
+        <span class="text-[12px] md:text-[16px] text-primary mt-5 lg:mt-21"
+          >ABOUT</span
+        >
+        <h1
+          class="font-jakarta text-[30px] md:text-[74px] text-[#020C22] max-w-[891px] text-center leading-tight mt-2"
+        >
+          We build a Website & Build Results.
+        </h1>
+
+        <div
+          class="flex flex-col lg:flex-row items-center lg:items-start gap-13 mt-5 lg:mt-20"
+        >
+          {# image #}
+          <div class="relative">
+            <img
+              src="/src/images/hero.jpg"
+              alt="What Makes Us Different"
+              class="w-[522px] lg:min-w-[522px] lg:max-w-[522px] rounded-2xl"
+            />
+            <div
+              class="absolute bottom-4 right-4 backdrop-blur-xl flex flex-col p-2 rounded-lg"
+            >
+              <span class="text-[#FCFBFB] text-[14px] font-bold">
+                Giorgi Khutiashvili
+              </span>
+              <span class="text-[#FCFBFB] text-[14px]"> Founder </span>
+            </div>
+          </div>
+          {# our story #}
+          <div class="max-w-[706px] w-full mt-0 lg:mt-10">
+            <span class="text-[16px] text-primary"> WHO WE ARE </span>
+            <h2 class="text-[30px] lg:text-[60px] text-[#020C22] font-jakarta">
+              Our Story
+            </h2>
+            <p class="text-[14px] lg:text-[18px] text-[#515A6E] mt-4">
+              Craftall is a web design studio built for small businesses that
+              want more than just a beautiful website, but want one that works.
+              We started Craftall to solve a common problem: websites that look
+              impressive but fail to convert. They’re full of visuals and
+              features, yet struggle to communicate clearly or drive action. We
+              build websites that are structured to perform simple, strategic,
+              and built with your goals in mind. Each website we build is
+              custom-designed for small businesses and focused on what actually
+              drives results, not what looks impressive in a boardroom. We focus
+              on structure, clarity, and performance. Every page, section, and
+              message is created to support your business growth. No templates.
+              No bloated design. Just smart decisions that help you move faster
+              and convert better. Whether you're launching something new or
+              rebuilding something broken, we design websites that work as hard
+              as you do.
+            </p>
+            <a
+              href="/contact/"
+              class="block bg-primary w-full lg:max-w-[120px] py-2 mt-8 rounded-4xl text-[14px] text-center items-center justify-center text-white font-semibold"
+            >
+              Schedule a Call</a
+            >
+          </div>
+        </div>
+      </div>
+      {# stats #}
+      <div
+        class="flex flex-col md:flex-row max-w-[1280px] mx-auto gap-5 mt-10 w-full"
+      >
+        <div
+          class="w-full md:w-1/2 p-5 rounded-2xl bg-[#F5F7F9] border border-[#F2F2F2] flex flex-col"
+        >
+          <span class="font-jakarta text-[52px] md:text-[74px]">100%</span>
+          <span class="text-[14px] md:text-[18px] mt-5 text-[#515A6E]"
+            >Proven Track Record of Excellence</span
+          >
+        </div>
+        <div
+          class="w-full md:w-1/2 p-5 rounded-2xl bg-[#F5F7F9] border border-[#F2F2F2] flex flex-col"
+        >
+          <span class="font-jakarta text-[52px] md:text-[74px]">22+</span>
+          <span class="text-[14px] md:text-[18px] mt-5 text-[#515A6E]"
+            >Clients Served with Proven Results</span
+          >
+        </div>
+      </div>
+      {# our approach #}
+      <div class="mt-5 md:mt-20 max-w-[1280px] mx-auto flex gap-10 flex-col lg:flex-row">
+        <div>
+          <span class="uppercase text-[12px] md:text-[16px] text-primary"
+            >how we work</span
+          >
+          <h2 class="text-[24px] lg:text-[52px] text-[#020C22] font-jakarta">
+            Our Approach in 3 Steps
+          </h2>
+          <a
+            href="/contact/"
+            class="block bg-primary w-full max-w-[120px] py-2 mt-2 md:mt-8 rounded-4xl text-[14px] text-center items-center justify-center text-white font-semibold"
+          >
+            Contact Us</a
+          >
+        </div>
+        {# steps #}
+        <div class="flex flex-col gap-4 w-full">
+          <div class="bg-[#F5F7F9] border border-[#D5E1FD] rounded-lg p-6">
+            <div class="w-[60px] h-[60px] bg-primary rounded-full font-jakarta text-[28px] text-white font-semibold flex items-center justify-center">01</div>
+            <span class="text-[28px] font-jakarta text-[#1D1D1D] font-semibold mt-3 block">Discover</span>
+            <p class="text-[18px] text-[#515A6E] mt-3">
+                We learn about your business, your goals, and your audience. We uncover what’s working, what’s missing, and build a clear plan around your unique value.
+            </p>
+          </div>
+          <div class="flex flex-col md:flex-row gap-4 w-full">
+            <div class="w-full md:w-1/2 bg-[#F5F7F9] border border-[#D5E1FD] rounded-lg p-6">
+                <div class="w-[60px] h-[60px] bg-primary rounded-full font-jakarta text-[28px] text-white font-semibold flex items-center justify-center">02</div>
+                <span class="text-[28px] font-jakarta text-[#1D1D1D] font-semibold mt-3 block">Design</span>
+                <p class="text-[18px] text-[#515A6E] mt-3">
+                    We map out your structure, write clear messaging, and design a smooth experience that will convert across every screen and every stage of your customer journey.
+                </p>
+            </div>
+            <div class="w-full md:w-1/2 bg-[#F5F7F9] border border-[#D5E1FD] rounded-lg p-6">
+                <div class="w-[60px] h-[60px] bg-primary rounded-full font-jakarta text-[28px] text-white font-semibold flex items-center justify-center">03</div>
+                <span class="text-[28px] font-jakarta text-[#1D1D1D] font-semibold mt-3 block">Build & Launch</span>
+                <p class="text-[18px] text-[#515A6E] mt-3">
+                    We develop your site mobile-first, SEO-ready, and fast. After launch, we stay close to support you and track results, so your site continues to perform over time.
+                </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% include "components/sections/testimonials.njk" %}
+      <div class="max-w-[1280px] mx-auto">
+          {% include "components/sections/cta.njk" %}
+      </div>
     </main>
 
     {% include "components/base/footer.njk" %}
-</body>
-</html> 
+  </body>
+</html>
