@@ -1,19 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>E-commerce Site - Craftal Web Design Agency</title>
-    
+
     <!-- Preload critical fonts -->
-    <link rel="preload" href="/src/fonts/Satoshi-Regular.otf" as="font" type="font/otf" crossorigin>
-    <link rel="preload" href="/src/fonts/Satoshi-Medium.otf" as="font" type="font/otf" crossorigin>
-    <link rel="preload" href="/src/fonts/Satoshi-Bold.otf" as="font" type="font/otf" crossorigin>
-    
-    <link href="/src/output.css" rel="stylesheet" type="text/css">
+    <link
+      rel="preload"
+      href="/src/fonts/Satoshi-Regular.otf"
+      as="font"
+      type="font/otf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/src/fonts/Satoshi-Medium.otf"
+      as="font"
+      type="font/otf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/src/fonts/Satoshi-Bold.otf"
+      as="font"
+      type="font/otf"
+      crossorigin
+    />
+
+    <link href="/src/output.css" rel="stylesheet" type="text/css" />
     <script src="/src/js/app.js" defer type="text/javascript"></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
     <div class="flex justify-between items-center max-w-[1439px] mx-auto px-3 md:px-7 py-4">
         <div class="flex items-center">
@@ -104,13 +122,232 @@
     </div>
 </header>
 
-    <main class="max-w-[1439px] mx-auto px-3 md:px-7 py-8">
-        <h1 class="text-4xl font-bold text-center mb-8">E-commerce Site Development</h1>
-        <p class="text-lg text-center max-w-2xl mx-auto">
-            We build powerful e-commerce websites that drive sales and provide excellent user experience.
-        </p>
-    </main>
+    <main
+      class="max-w-[1280px] md:max-w-[2500px] w-full mx-auto px-2 md:px-7 py-4"
+    >
+      <div
+        class="hero-section w-full flex items-center rounded-2xl md:rounded-4xl justify-start flex-col"
+      >
+        <div
+          class="rounded-2xl md:rounded-4xl flex items-center justify-start flex-col bg-gradient-to-b from-[#EEF4FF] to-white w-full px-4"
+        >
+          <span
+            class="text-[12px] md:text-[16px] text-primary mt-5 lg:mt-21 uppercase"
+            >E-Commerce site</span
+          >
+          <h1
+            class="font-jakarta text-[30px] md:text-[60px] text-[#020C22] max-w-[891px] text-center leading-tight lg:leading-[60px] mt-2"
+          >
+            Sell smarter. Scale faster. <br />
+            Stress less.
+          </h1>
+          <p class="text-[#515A6E] max-w-[750px] text-center mt-8">
+            We build custom eCommerce websites that are fast, secure, and easy
+            to manage so you can focus on growing your business, not fixing your
+            site.
+          </p>
+          <a
+            href="/contact/"
+            class="lg:hidden bg-primary w-[124px] mt-4 block py-2 mt-8 rounded-4xl text-[14px] text-center items-center justify-center text-white font-semibold"
+          >
+            Get Started</a
+          >
+        </div>
+        <div class="flex gap-10 lg:gap-20 flex-col lg:flex-row mt-5 md:mt-30">
+          <div class="max-w-[1280px] w-full mx-auto px-4">
+            <span
+              class="text-[12px] md:text-[16px] text-primary mt-5 lg:mt-21 uppercase"
+              >WHY IT MATTERS</span
+            >
+            <h1
+              class="font-jakarta text-[30px] md:text-[60px] text-[#020C22] max-w-[891px] leading-tight lg:leading-[60px] mt-2"
+            >
+              Built for Performance, <br />
+              Designed for Growth
+            </h1>
+            <p class="text-[#515A6E] max-w-[750px] text-center mt-8">
+              Your eCommerce website should do more than look good, it should
+              deliver real results. We focus on performance at every layer of
+              the experience to help your business grow and scale with
+              confidence.
+            </p>
+            <ul class="mt-10">
+              <li class="flex items-center gap-2">
+                <svg
+                  width="20"
+                  height="21"
+                  viewBox="0 0 20 21"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10 0.5C4.48 0.5 0 4.98 0 10.5C0 16.02 4.48 20.5 10 20.5C15.52 20.5 20 16.02 20 10.5C20 4.98 15.52 0.5 10 0.5ZM7.29 14.79L3.7 11.2C3.60742 11.1074 3.53398 10.9975 3.48387 10.8765C3.43377 10.7556 3.40798 10.6259 3.40798 10.495C3.40798 10.3641 3.43377 10.2344 3.48387 10.1135C3.53398 9.99249 3.60742 9.88258 3.7 9.79C3.79258 9.69742 3.90249 9.62398 4.02346 9.57387C4.14442 9.52377 4.27407 9.49798 4.405 9.49798C4.53593 9.49798 4.66558 9.52377 4.78654 9.57387C4.90751 9.62398 5.01742 9.69742 5.11 9.79L8 12.67L14.88 5.79C15.067 5.60302 15.3206 5.49798 15.585 5.49798C15.8494 5.49798 16.103 5.60302 16.29 5.79C16.477 5.97698 16.582 6.23057 16.582 6.495C16.582 6.75943 16.477 7.01302 16.29 7.2L8.7 14.79C8.60749 14.8827 8.4976 14.9563 8.37662 15.0064C8.25565 15.0566 8.12597 15.0824 7.995 15.0824C7.86403 15.0824 7.73435 15.0566 7.61338 15.0064C7.4924 14.9563 7.38251 14.8827 7.29 14.79Z"
+                    fill="#447DFC"
+                  />
+                </svg>
+                <span class="text-[#515A6E]">Lower bounce rates</span>
+              </li>
+              <li class="flex items-center gap-2 mt-4">
+                <svg
+                  width="20"
+                  height="21"
+                  viewBox="0 0 20 21"
+                  fill="none"
+                  class="min-w-[20px]"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10 0.5C4.48 0.5 0 4.98 0 10.5C0 16.02 4.48 20.5 10 20.5C15.52 20.5 20 16.02 20 10.5C20 4.98 15.52 0.5 10 0.5ZM7.29 14.79L3.7 11.2C3.60742 11.1074 3.53398 10.9975 3.48387 10.8765C3.43377 10.7556 3.40798 10.6259 3.40798 10.495C3.40798 10.3641 3.43377 10.2344 3.48387 10.1135C3.53398 9.99249 3.60742 9.88258 3.7 9.79C3.79258 9.69742 3.90249 9.62398 4.02346 9.57387C4.14442 9.52377 4.27407 9.49798 4.405 9.49798C4.53593 9.49798 4.66558 9.52377 4.78654 9.57387C4.90751 9.62398 5.01742 9.69742 5.11 9.79L8 12.67L14.88 5.79C15.067 5.60302 15.3206 5.49798 15.585 5.49798C15.8494 5.49798 16.103 5.60302 16.29 5.79C16.477 5.97698 16.582 6.23057 16.582 6.495C16.582 6.75943 16.477 7.01302 16.29 7.2L8.7 14.79C8.60749 14.8827 8.4976 14.9563 8.37662 15.0064C8.25565 15.0566 8.12597 15.0824 7.995 15.0824C7.86403 15.0824 7.73435 15.0566 7.61338 15.0064C7.4924 14.9563 7.38251 14.8827 7.29 14.79Z"
+                    fill="#447DFC"
+                  />
+                </svg>
+                <span class="text-[#515A6E]"
+                  >Higher conversions through UX-led product and checkout
+                  flows</span
+                >
+              </li>
+              <li class="flex items-center gap-2 mt-4">
+                <svg
+                  width="20"
+                  height="21"
+                  viewBox="0 0 20 21"
+                  fill="none"
+                  class="min-w-[20px]"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10 0.5C4.48 0.5 0 4.98 0 10.5C0 16.02 4.48 20.5 10 20.5C15.52 20.5 20 16.02 20 10.5C20 4.98 15.52 0.5 10 0.5ZM7.29 14.79L3.7 11.2C3.60742 11.1074 3.53398 10.9975 3.48387 10.8765C3.43377 10.7556 3.40798 10.6259 3.40798 10.495C3.40798 10.3641 3.43377 10.2344 3.48387 10.1135C3.53398 9.99249 3.60742 9.88258 3.7 9.79C3.79258 9.69742 3.90249 9.62398 4.02346 9.57387C4.14442 9.52377 4.27407 9.49798 4.405 9.49798C4.53593 9.49798 4.66558 9.52377 4.78654 9.57387C4.90751 9.62398 5.01742 9.69742 5.11 9.79L8 12.67L14.88 5.79C15.067 5.60302 15.3206 5.49798 15.585 5.49798C15.8494 5.49798 16.103 5.60302 16.29 5.79C16.477 5.97698 16.582 6.23057 16.582 6.495C16.582 6.75943 16.477 7.01302 16.29 7.2L8.7 14.79C8.60749 14.8827 8.4976 14.9563 8.37662 15.0064C8.25565 15.0566 8.12597 15.0824 7.995 15.0824C7.86403 15.0824 7.73435 15.0566 7.61338 15.0064C7.4924 14.9563 7.38251 14.8827 7.29 14.79Z"
+                    fill="#447DFC"
+                  />
+                </svg>
+                <span class="text-[#515A6E]"
+                  >Improved retention with intuitive navigation and repeat
+                  engagement</span
+                >
+              </li>
+              <li class="flex items-center gap-2 mt-4">
+                <svg
+                  width="20"
+                  height="21"
+                  viewBox="0 0 20 21"
+                  fill="none"
+                  class="min-w-[20px]"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10 0.5C4.48 0.5 0 4.98 0 10.5C0 16.02 4.48 20.5 10 20.5C15.52 20.5 20 16.02 20 10.5C20 4.98 15.52 0.5 10 0.5ZM7.29 14.79L3.7 11.2C3.60742 11.1074 3.53398 10.9975 3.48387 10.8765C3.43377 10.7556 3.40798 10.6259 3.40798 10.495C3.40798 10.3641 3.43377 10.2344 3.48387 10.1135C3.53398 9.99249 3.60742 9.88258 3.7 9.79C3.79258 9.69742 3.90249 9.62398 4.02346 9.57387C4.14442 9.52377 4.27407 9.49798 4.405 9.49798C4.53593 9.49798 4.66558 9.52377 4.78654 9.57387C4.90751 9.62398 5.01742 9.69742 5.11 9.79L8 12.67L14.88 5.79C15.067 5.60302 15.3206 5.49798 15.585 5.49798C15.8494 5.49798 16.103 5.60302 16.29 5.79C16.477 5.97698 16.582 6.23057 16.582 6.495C16.582 6.75943 16.477 7.01302 16.29 7.2L8.7 14.79C8.60749 14.8827 8.4976 14.9563 8.37662 15.0064C8.25565 15.0566 8.12597 15.0824 7.995 15.0824C7.86403 15.0824 7.73435 15.0566 7.61338 15.0064C7.4924 14.9563 7.38251 14.8827 7.29 14.79Z"
+                    fill="#447DFC"
+                  />
+                </svg>
+                <span class="text-[#515A6E]"
+                  >Better ad performance from stronger speed and quality
+                  signals</span
+                >
+              </li>
+              <li class="flex items-center gap-2 mt-4">
+                <svg
+                  width="20"
+                  height="21"
+                  viewBox="0 0 20 21"
+                  fill="none"
+                  class="min-w-[20px]"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M10 0.5C4.48 0.5 0 4.98 0 10.5C0 16.02 4.48 20.5 10 20.5C15.52 20.5 20 16.02 20 10.5C20 4.98 15.52 0.5 10 0.5ZM7.29 14.79L3.7 11.2C3.60742 11.1074 3.53398 10.9975 3.48387 10.8765C3.43377 10.7556 3.40798 10.6259 3.40798 10.495C3.40798 10.3641 3.43377 10.2344 3.48387 10.1135C3.53398 9.99249 3.60742 9.88258 3.7 9.79C3.79258 9.69742 3.90249 9.62398 4.02346 9.57387C4.14442 9.52377 4.27407 9.49798 4.405 9.49798C4.53593 9.49798 4.66558 9.52377 4.78654 9.57387C4.90751 9.62398 5.01742 9.69742 5.11 9.79L8 12.67L14.88 5.79C15.067 5.60302 15.3206 5.49798 15.585 5.49798C15.8494 5.49798 16.103 5.60302 16.29 5.79C16.477 5.97698 16.582 6.23057 16.582 6.495C16.582 6.75943 16.477 7.01302 16.29 7.2L8.7 14.79C8.60749 14.8827 8.4976 14.9563 8.37662 15.0064C8.25565 15.0566 8.12597 15.0824 7.995 15.0824C7.86403 15.0824 7.73435 15.0566 7.61338 15.0064C7.4924 14.9563 7.38251 14.8827 7.29 14.79Z"
+                    fill="#447DFC"
+                  />
+                </svg>
+                <span class="text-[#515A6E]"
+                  >A scalable foundation built to grow with your business</span
+                >
+              </li>
+            </ul>
+            <a
+              href="/contact/"
+              class="bg-primary mx-auto lg:mx-0 w-[124px] mt-4 block py-2 mt-8 rounded-4xl text-[14px] text-center items-center justify-center text-white font-semibold"
+            >
+              Schedule a call</a
+            >
+          </div>
+          <img
+            src="/src/images/ecommerce.png"
+            alt="ecommerce img"
+            class="rounded-2xl"
+          />
+        </div>
 
+        
+        <div class="mt-10 md:mt-10">
+          <span
+            class="text-[12px] md:text-[16px] text-primary mt-5 lg:mt-21 uppercase block mx-auto text-center"
+            >WHAT WE DELIVER</span
+          >
+          <h1
+            class="font-jakarta text-[30px] mx-auto md:text-[60px] text-[#020C22] max-w-[891px] text-center leading-tight lg:leading-[60px] mt-2"
+          >
+            What You Get with Our <br />
+            eCommerce Website Services
+          </h1>
+          <p class="text-[#515A6E] max-w-[750px] text-center mt-8 mx-auto">
+            We build custom online stores tailored to your brand and business goals. Our eCommerce websites are easy to manage, mobile-friendly, and optimized for results.
+          </p>
+          
+          <div class="mt-10 flex gap-5 w-full flex-col md:flex-row">
+            <div class="rounded-2xl border border-[#D5E1FD] p-5 w-full md:max-w-[414px] bg-[#F9FBFF]">
+                <div class="w-[60px] h-[60px] rounded-full bg-[#F0F5FF] flex items-center justify-center">
+                    <img src="/src/images/puzzle.png" alt="ecommerce-1" class="w-[32px] h-[32px]">
+                </div>
+                <h2 class="text-[#1D1D1D] text-[24px] font-semibold">
+                    Custom Design & Setup
+                </h2>
+                <p class="text-[#515A6E] mt-3">
+                    We build custom online stores tailored to your brand and business goals. Our eCommerce websites are easy to manage, mobile-friendly, and optimized for results.
+                  </p>
+            </div>
+            <div class="rounded-2xl border border-[#D5E1FD] p-5 w-full md:max-w-[414px] bg-[#F9FBFF]">
+                <div class="w-[60px] h-[60px] rounded-full bg-[#F0F5FF] flex items-center justify-center">
+                    <img src="/src/images/rocket.png" alt="ecommerce-1" class="w-[32px] h-[32px]">
+                </div>
+                <h2 class="text-[#1D1D1D] text-[24px] font-semibold">
+                    Mobile & Conversion Optimized
+                </h2>
+                <p class="text-[#515A6E] mt-3">
+                    Your store will perform beautifully on every screen. We optimize load time, layout, and interactions for mobile users, driving engagement and reducing drop-off.
+                  </p>
+            </div>
+            <div class="rounded-2xl border border-[#D5E1FD] p-5 w-full md:max-w-[414px] bg-[#F9FBFF]">
+                <div class="w-[60px] h-[60px] rounded-full bg-[#F0F5FF] flex items-center justify-center">
+                    <img src="/src/images/card.png" alt="ecommerce-1" class="w-[32px] h-[32px]">
+                </div>
+                <h2 class="text-[#1D1D1D] text-[24px] font-semibold">
+                    Checkout & Management
+                </h2>
+                <p class="text-[#515A6E] mt-3">
+                    We set up secure payments, shipping, and inventory tools that work without complexity. Post-launch, you’ll have full control with an interface that’s stable and easy to manage.
+                  </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-full flex justify-center">
+        <div
+  class="max-w-[1377px] w-full mt-0 md:mt-20 h-[360px] bg-primary rounded-xl p-4 flex flex-col text-white justify-center items-center gap-3"
+>
+  <h2 class="font-jakarta  text-[28px] md:text-[44px] leading-tight max-w-[670px] text-center">
+    Ready to get the Website you have always wanted?
+  </h2>
+  <p class="text-[#FAFAFACC] text-center text-[14px] md:text-[18px]">Let’s help you grow your business</p>
+  <a
+    href="/contact/"
+    class="bg-white text-primary mt-4 w-[100px] h-[40px] leading-[40px] rounded-4xl text-[14px] text-center items-center justify-center text-white font-semibold"
+  >
+    Get Started</a
+  >
+</div>
+
+      </div>
+    </main>
     <footer
   class="max-w-[1248px] mt-10 md:mt-20 w-full mx-auto flex justify-between flex-col lg:flex-row px-7 xl:px-0"
 >
@@ -185,5 +422,5 @@
 
 
 
-</body>
-</html> 
+  </body>
+</html>

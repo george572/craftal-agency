@@ -1,19 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us - Craftal Web Design Agency</title>
-    
+
     <!-- Preload critical fonts -->
-    <link rel="preload" href="/src/fonts/Satoshi-Regular.otf" as="font" type="font/otf" crossorigin>
-    <link rel="preload" href="/src/fonts/Satoshi-Medium.otf" as="font" type="font/otf" crossorigin>
-    <link rel="preload" href="/src/fonts/Satoshi-Bold.otf" as="font" type="font/otf" crossorigin>
-    
-    <link href="/src/output.css" rel="stylesheet" type="text/css">
+    <link
+      rel="preload"
+      href="/src/fonts/Satoshi-Regular.otf"
+      as="font"
+      type="font/otf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/src/fonts/Satoshi-Medium.otf"
+      as="font"
+      type="font/otf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/src/fonts/Satoshi-Bold.otf"
+      as="font"
+      type="font/otf"
+      crossorigin
+    />
+
+    <link href="/src/output.css" rel="stylesheet" type="text/css" />
     <script src="/src/js/app.js" defer type="text/javascript"></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
     <div class="flex justify-between items-center max-w-[1439px] mx-auto px-3 md:px-7 py-4">
         <div class="flex items-center">
@@ -104,12 +122,86 @@
     </div>
 </header>
 
-    <main class="max-w-[1439px] mx-auto px-3 md:px-7 py-8">
-        <h1 class="text-4xl font-bold text-center mb-8">Contact Us</h1>
-        <p class="text-lg text-center max-w-2xl mx-auto">
-            Get in touch with us to start your project today.
-        </p>
-    </main>
+    <main
+      class="max-w-[1280px] md:max-w-[2500px] w-full mx-auto px-2 md:px-7 py-4"
+    >
+      <div
+        class="w-full flex items-center rounded-2xl md:rounded-4xl justify-start flex-col "
+      >
+      <div class="w-full rounded-2xl md:rounded-4xl flex justify-start flex-col bg-gradient-to-b from-[#EEF4FF] to-white w-full">
+        <div class="max-w-[1280px] w-full mx-auto lg:py-20 py-5 min-h-screen flex lg:justify-between px-5 flex-col lg:flex-row">
+            <div class="flex flex-col">
+                <span class="text-[12px] self-center md:self-start md:text-[16px] text-primary mt-5 lg:mt-21"
+                    >CONTACT</span
+                  >
+                  <h1
+                    class="font-jakarta text-[30px] self-center md:self-start text-center md:text-left md:text-[60px] text-[#020C22] max-w-[891px] leading-[40px] lg:leading-[60px] mt-0 lg:mt-2 "
+                  >
+                  Got questions? <br class="hidden lg:block"/> Let’s talk.
+                  </h1>
+                  <div class="mt-6 flex items-center gap-3 pb-5 lg:pb-0">
+                      <img src="/src/images/email.png" alt="Email Img" class="w-[40px] lg:w-[60px] h-[40px] lg:h-[60px] object-cover ">
+                      <div class="flex flex-col">
+                        <span class="text-[#373F51]">Email Address</span>
+                        <a href="mailto:info@craftal.agency " class="underline text-[#515A6E]">info@craftal.agency</a>
+                      </div>
+                  </div>
+            </div>
+              
+
+              <div class="w-full what-we-do-bg max-w-[646px] w-full h-[750px] rounded-3xl p-2 md:p-5">
+                <div class="w-full h-full bg-white rounded-2xl p-6 pb-10">
+                    <h2 class="font-jakarta text-[30px] md:text-[60px] text-[#020C22]">Get In Touch</h2>
+
+                    <!-- Success Message (hidden by default) -->
+                    <div id="success-message" class="hidden bg-green-100 border mt-20 border-green-400 text-green-700 px-8 py-12 rounded-2xl text-center">
+                        <div class="flex flex-col items-center justify-center">
+                            <svg class="w-16 h-16 mb-4 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <h3 class="text-2xl font-bold text-green-800 mb-2">Message Sent Successfully!</h3>
+                            <p class="text-lg text-green-700">Thank you for your message. We'll get back to you soon!</p>
+                            <button onclick="location.reload()" class="mt-6 bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg transition-colors">
+                                Finish!
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Error Message (hidden by default) -->
+                    <div id="error-message" class="hidden bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg mb-6">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="font-medium">Error!</span>
+                        </div>
+                        <p class="mt-1">There was a problem sending your message. Please try again.</p>
+                    </div>
+
+                    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <div class="flex flex-col gap-2">
+                            <label for="name" class="text-[#373F51]">Full Name</label>
+                            <input required type="text" id="name" name="name" placeholder="Name" class="h-[52px] border border-[#E3E3E3] outline-none rounded-lg p-2 px-4">
+                        </div>
+                        
+                        <div class="flex flex-col gap-2 mt-6">
+                            <label for="email" class="text-[#373F51]">Email Address</label>
+                            <input required type="email" id="email" name="email" placeholder="Email" class="h-[52px] border border-[#E3E3E3] outline-none rounded-lg p-2 px-4">
+                        </div>
+                        
+                        <div class="flex flex-col gap-2 mt-6">
+                            <label for="message" class="text-[#373F51]">Message</label>
+                            <textarea required id="message" name="message" placeholder="Tell us a bit about your business" cols="30" rows="10" class="border border-[#E3E3E3] outline-none rounded-lg p-2 px-4"></textarea>
+                        </div>
+                        <input type="hidden" name="access_key" value="59ea6535-bc67-4a34-be0d-d25831e389a9">
+
+                        <button type="submit" class="bg-primary text-white px-4 py-2 rounded-full w-full mt-6 cursor-pointer">Send Message</button>
+                    </form>
+                </div>
+              </div>
+        </div>  
+
+      </div>
 
     <footer
   class="max-w-[1248px] mt-10 md:mt-20 w-full mx-auto flex justify-between flex-col lg:flex-row px-7 xl:px-0"
@@ -185,5 +277,5 @@
 
 
 
-</body>
-</html> 
+  </body>
+</html>
