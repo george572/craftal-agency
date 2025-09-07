@@ -4,12 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About - Craftal Web Design Agency</title>
-
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-PSXB3B52");
+    </script>
+    <!-- End Google Tag Manager -->
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/src/images/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="/src/images/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/src/images/favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/src/images/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="/src/images/favicon.ico" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/src/images/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/src/images/favicon-32x32.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/src/images/apple-touch-icon.png"
+    />
 
     <!-- Preload critical fonts -->
     <link
@@ -38,24 +65,34 @@
     <script src="/src/js/app.js" defer type="text/javascript"></script>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PSXB3B52"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     {% include "components/base/header.njk" %}
 
     <main
       class="max-w-[1280px] md:max-w-[2500px] w-full mx-auto px-2 md:px-7 py-4"
     >
-      <div
-        class="hero-section w-full flex items-center flex-col"
-      >
-      <div class="w-full flex items-center rounded-2xl md:rounded-4xl justify-start bg-gradient-to-b from-[#EEF4FF] to-white flex-col">
-        <span class="text-[12px] md:text-[16px] text-primary mt-5 lg:mt-21"
-          >ABOUT</span
+      <div class="hero-section w-full flex items-center flex-col">
+        <div
+          class="w-full flex items-center rounded-2xl md:rounded-4xl justify-start bg-gradient-to-b from-[#EEF4FF] to-white flex-col"
         >
-        <h1
-          class="font-jakarta text-[30px] md:text-[74px] text-[#020C22] max-w-[891px] text-center leading-tight mt-2"
-        >
-          We build a Website & Build Results.
-        </h1>
-      </div>
+          <span class="text-[12px] md:text-[16px] text-primary mt-5 lg:mt-21"
+            >ABOUT</span
+          >
+          <h1
+            class="font-jakarta text-[30px] md:text-[74px] text-[#020C22] max-w-[891px] text-center leading-tight mt-2"
+          >
+            We build a Website & Build Results.
+          </h1>
+        </div>
 
         <div
           class="flex flex-col lg:flex-row items-center lg:items-start gap-13 mt-5 lg:mt-20"
@@ -130,7 +167,9 @@
         </div>
       </div>
       {# our approach #}
-      <div class="mt-5 md:mt-20 max-w-[1280px] mx-auto flex gap-10 flex-col lg:flex-row">
+      <div
+        class="mt-5 md:mt-20 max-w-[1280px] mx-auto flex gap-10 flex-col lg:flex-row"
+      >
         <div>
           <span class="uppercase text-[12px] md:text-[16px] text-primary"
             >how we work</span
@@ -148,33 +187,64 @@
         {# steps #}
         <div class="flex flex-col gap-4 w-full">
           <div class="bg-[#F5F7F9] border border-[#D5E1FD] rounded-lg p-6">
-            <div class="w-[60px] h-[60px] bg-primary rounded-full font-jakarta text-[28px] text-white font-semibold flex items-center justify-center">01</div>
-            <span class="text-[28px] font-jakarta text-[#1D1D1D] font-semibold mt-3 block">Discover</span>
+            <div
+              class="w-[60px] h-[60px] bg-primary rounded-full font-jakarta text-[28px] text-white font-semibold flex items-center justify-center"
+            >
+              01
+            </div>
+            <span
+              class="text-[28px] font-jakarta text-[#1D1D1D] font-semibold mt-3 block"
+              >Discover</span
+            >
             <p class="text-[18px] text-[#515A6E] mt-3">
-                We learn about your business, your goals, and your audience. We uncover what’s working, what’s missing, and build a clear plan around your unique value.
+              We learn about your business, your goals, and your audience. We
+              uncover what’s working, what’s missing, and build a clear plan
+              around your unique value.
             </p>
           </div>
           <div class="flex flex-col md:flex-row gap-4 w-full">
-            <div class="w-full md:w-1/2 bg-[#F5F7F9] border border-[#D5E1FD] rounded-lg p-6">
-                <div class="w-[60px] h-[60px] bg-primary rounded-full font-jakarta text-[28px] text-white font-semibold flex items-center justify-center">02</div>
-                <span class="text-[28px] font-jakarta text-[#1D1D1D] font-semibold mt-3 block">Design</span>
-                <p class="text-[18px] text-[#515A6E] mt-3">
-                    We map out your structure, write clear messaging, and design a smooth experience that will convert across every screen and every stage of your customer journey.
-                </p>
+            <div
+              class="w-full md:w-1/2 bg-[#F5F7F9] border border-[#D5E1FD] rounded-lg p-6"
+            >
+              <div
+                class="w-[60px] h-[60px] bg-primary rounded-full font-jakarta text-[28px] text-white font-semibold flex items-center justify-center"
+              >
+                02
+              </div>
+              <span
+                class="text-[28px] font-jakarta text-[#1D1D1D] font-semibold mt-3 block"
+                >Design</span
+              >
+              <p class="text-[18px] text-[#515A6E] mt-3">
+                We map out your structure, write clear messaging, and design a
+                smooth experience that will convert across every screen and
+                every stage of your customer journey.
+              </p>
             </div>
-            <div class="w-full md:w-1/2 bg-[#F5F7F9] border border-[#D5E1FD] rounded-lg p-6">
-                <div class="w-[60px] h-[60px] bg-primary rounded-full font-jakarta text-[28px] text-white font-semibold flex items-center justify-center">03</div>
-                <span class="text-[28px] font-jakarta text-[#1D1D1D] font-semibold mt-3 block">Build & Launch</span>
-                <p class="text-[18px] text-[#515A6E] mt-3">
-                    We develop your site mobile-first, SEO-ready, and fast. After launch, we stay close to support you and track results, so your site continues to perform over time.
-                </p>
+            <div
+              class="w-full md:w-1/2 bg-[#F5F7F9] border border-[#D5E1FD] rounded-lg p-6"
+            >
+              <div
+                class="w-[60px] h-[60px] bg-primary rounded-full font-jakarta text-[28px] text-white font-semibold flex items-center justify-center"
+              >
+                03
+              </div>
+              <span
+                class="text-[28px] font-jakarta text-[#1D1D1D] font-semibold mt-3 block"
+                >Build & Launch</span
+              >
+              <p class="text-[18px] text-[#515A6E] mt-3">
+                We develop your site mobile-first, SEO-ready, and fast. After
+                launch, we stay close to support you and track results, so your
+                site continues to perform over time.
+              </p>
             </div>
           </div>
         </div>
       </div>
       {% include "components/sections/testimonials.njk" %}
       <div class="max-w-[1280px] mx-auto">
-          {% include "components/sections/cta.njk" %}
+        {% include "components/sections/cta.njk" %}
       </div>
     </main>
 
