@@ -213,9 +213,6 @@
   .top-\[5px\] {
     top: 5px;
   }
-  .top-\[7px\] {
-    top: 7px;
-  }
   .right-1 {
     right: calc(var(--spacing) * 1);
   }
@@ -810,9 +807,6 @@
   }
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
-  }
-  .px-10 {
-    padding-inline: calc(var(--spacing) * 10);
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
@@ -1612,35 +1606,35 @@
   src: url('./fonts/Satoshi-Regular.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
-  font-display: block;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Satoshi';
   src: url('./fonts/Satoshi-Medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
-  font-display: block;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Satoshi';
   src: url('./fonts/Satoshi-Bold.otf') format('opentype');
   font-weight: 600;
   font-style: normal;
-  font-display: block;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Satoshi';
   src: url('./fonts/Satoshi-Bold.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
-  font-display: block;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Plus Jakarta Sans';
   src: url('./fonts/plusjakartasans.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
-  font-display: block;
+  font-display: swap;
 }
 @supports (font-display: optional) {
   @font-face {

@@ -112,6 +112,13 @@ document.addEventListener("DOMContentLoaded", () => {
 // gsap anims
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Wait for fonts to load before initializing animation
+    document.fonts.ready.then(() => {
+        initializeWordsRotator();
+    });
+});
+
+function initializeWordsRotator() {
     const words = gsap.utils.toArray(".words-rotator .word");
     const prefixWords = document.querySelector(".prefix-words");
     const suffixWords = document.querySelector(".suffix-words");
@@ -122,15 +129,22 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
     }
     
+    // Add retry logic in case fonts still aren't loaded
+    const prefixWidth = prefixWords.clientWidth;
+    const suffixWidth = suffixWords.clientWidth;
+    
+    if (prefixWidth === 0 || suffixWidth === 0) {
+        console.log('Fonts not fully loaded, retrying in 100ms...');
+        setTimeout(initializeWordsRotator, 100);
+        return;
+    }
+    
     const widths = words.map((w) => w.clientWidth);
     const pause = 2;
     const duration = 0.35;
     let largest = Math.max(...widths);
     let currentIndex = 0;
     
-    // Get the width of the prefix and suffix text
-    const prefixWidth = prefixWords.clientWidth;
-    const suffixWidth = suffixWords.clientWidth;
     const spacing = 8; // spacing between words
     const containerWidth = container.clientWidth;
     
@@ -224,7 +238,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }, "<");
         }
     });
-});
+}
 
 // Arrow SVG infinite rotation animation
 document.addEventListener('DOMContentLoaded', function() {
