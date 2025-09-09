@@ -1120,6 +1120,11 @@
       line-height: 60px;
     }
   }
+  .md\:\!top-\[13px\] {
+    @media (width >= 48rem) {
+      top: 13px !important;
+    }
+  }
   .md\:top-4 {
     @media (width >= 48rem) {
       top: calc(var(--spacing) * 4);
@@ -1378,6 +1383,11 @@
   .md\:text-\[74px\] {
     @media (width >= 48rem) {
       font-size: 74px;
+    }
+  }
+  .lg\:\!top-\[21px\] {
+    @media (width >= 64rem) {
+      top: 21px !important;
     }
   }
   .lg\:top-6 {
