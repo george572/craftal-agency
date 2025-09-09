@@ -23,6 +23,9 @@ module.exports = {
     ],
     theme: { 
       extend: {
+        screens: {
+          'xs': '321px', // Custom breakpoint
+        },
         fontFamily: {
           'sans': ['Satoshi', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
           'satoshi': ['Satoshi', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],

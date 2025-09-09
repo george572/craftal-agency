@@ -213,6 +213,9 @@
   .top-\[5px\] {
     top: 5px;
   }
+  .top-\[7px\] {
+    top: 7px;
+  }
   .right-1 {
     right: calc(var(--spacing) * 1);
   }
@@ -887,6 +890,9 @@
   .text-\[24px\] {
     font-size: 24px;
   }
+  .text-\[25px\] {
+    font-size: 25px;
+  }
   .text-\[28px\] {
     font-size: 28px;
   }
@@ -1096,6 +1102,11 @@
   .sm\:text-\[28px\] {
     @media (width >= 40rem) {
       font-size: 28px;
+    }
+  }
+  .sm\:text-\[30px\] {
+    @media (width >= 40rem) {
+      font-size: 30px;
     }
   }
   .sm\:text-\[60px\] {
@@ -1317,6 +1328,11 @@
   .md\:text-left {
     @media (width >= 48rem) {
       text-align: left;
+    }
+  }
+  .md\:\!text-\[49px\] {
+    @media (width >= 48rem) {
+      font-size: 49px !important;
     }
   }
   .md\:text-\[16px\] {
@@ -1542,6 +1558,11 @@
   .lg\:text-left {
     @media (width >= 64rem) {
       text-align: left;
+    }
+  }
+  .lg\:\!text-\[79px\] {
+    @media (width >= 64rem) {
+      font-size: 79px !important;
     }
   }
   .lg\:text-\[18px\] {
