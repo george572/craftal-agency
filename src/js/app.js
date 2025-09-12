@@ -262,7 +262,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const errorMessage = document.getElementById('error-message');
     
     if (contactForm) {
-        contactForm.addEventListener('submit', async function(e) {
+        // Store the submit handler function for reuse
+        const handleFormSubmit = async function(e) {
             e.preventDefault(); // Prevent default form submission
             
             // Hide any existing messages
@@ -286,6 +287,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
                 
                 if (response.ok) {
+                    // Trigger hidden submit button for Google Ads tracking
+                    const hiddenSubmit = document.getElementById('hidden-submit');
+                    if (hiddenSubmit) {
+                        // Temporarily remove event listener to allow default form submission
+                        contactForm.removeEventListener('submit', handleFormSubmit);
+                        hiddenSubmit.click();
+                        // Re-add the event listener for future submissions
+                        setTimeout(() => {
+                            contactForm.addEventListener('submit', handleFormSubmit);
+                        }, 100);
+                    }
+                    
                     // Success - hide form and show success message
                     if (contactForm) {
                         contactForm.style.display = 'none';
@@ -318,6 +331,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 submitButton.textContent = originalButtonText;
                 submitButton.disabled = false;
             }
-        });
+        };
+        
+        contactForm.addEventListener('submit', handleFormSubmit);
     }
 });

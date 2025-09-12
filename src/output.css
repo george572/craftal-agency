@@ -210,9 +210,6 @@
   .top-2 {
     top: calc(var(--spacing) * 2);
   }
-  .top-\[5px\] {
-    top: 5px;
-  }
   .top-\[7px\] {
     top: 7px;
   }
@@ -884,14 +881,8 @@
   .text-\[18px\] {
     font-size: 18px;
   }
-  .text-\[23px\] {
-    font-size: 23px;
-  }
   .text-\[24px\] {
     font-size: 24px;
-  }
-  .text-\[25px\] {
-    font-size: 25px;
   }
   .text-\[28px\] {
     font-size: 28px;
@@ -1104,11 +1095,6 @@
       font-size: 28px;
     }
   }
-  .sm\:text-\[30px\] {
-    @media (width >= 40rem) {
-      font-size: 30px;
-    }
-  }
   .sm\:text-\[60px\] {
     @media (width >= 40rem) {
       font-size: 60px;
@@ -1128,11 +1114,6 @@
   .md\:top-4 {
     @media (width >= 48rem) {
       top: calc(var(--spacing) * 4);
-    }
-  }
-  .md\:top-\[13px\] {
-    @media (width >= 48rem) {
-      top: 13px;
     }
   }
   .md\:mx-3 {
@@ -1365,11 +1346,6 @@
       font-size: 44px;
     }
   }
-  .md\:text-\[49px\] {
-    @media (width >= 48rem) {
-      font-size: 49px;
-    }
-  }
   .md\:text-\[50px\] {
     @media (width >= 48rem) {
       font-size: 50px;
@@ -1393,11 +1369,6 @@
   .lg\:top-6 {
     @media (width >= 64rem) {
       top: calc(var(--spacing) * 6);
-    }
-  }
-  .lg\:top-\[21px\] {
-    @media (width >= 64rem) {
-      top: 21px;
     }
   }
   .lg\:mx-0 {
@@ -1598,11 +1569,6 @@
   .lg\:text-\[60px\] {
     @media (width >= 64rem) {
       font-size: 60px;
-    }
-  }
-  .lg\:text-\[79px\] {
-    @media (width >= 64rem) {
-      font-size: 79px;
     }
   }
   .lg\:leading-\[60px\] {
