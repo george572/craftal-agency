@@ -46,6 +46,25 @@
 
   gtag('config', 'G-Y1CY4B2GRR');
 </script>
+<!-- Google tag (gtag.js) event - delayed navigation helper -->
+<script>
+  // Helper function to delay opening a URL until a gtag event is sent.
+  // Call it in response to an action that should navigate to a URL.
+  function gtagSendEvent(url) {
+    var callback = function () {
+      if (typeof url === 'string') {
+        window.location = window.location;
+      }
+    };
+    gtag('event', 'ads_conversion_Contact_Us_1', {
+      'event_callback': callback,
+      'event_timeout': 2000,
+      // <event_parameters>
+    });
+    return false;
+  }
+</script>
+
   </head>
   <body>
     <header>
@@ -214,7 +233,7 @@
                         <!-- Hidden submit button for Google Ads tracking -->
                         <button type="submit" id="hidden-submit" style="display: none;" aria-hidden="true"></button>
 
-                        <button type="submit" class="bg-primary text-white px-4 py-2 rounded-full w-full mt-6 cursor-pointer">Send Message</button>
+                        <button type="submit" onclick="return gtagSendEvent();" class="bg-primary text-white px-4 py-2 rounded-full w-full mt-6 cursor-pointer">Send Message</button>
                     </form>
                 </div>
               </div>
