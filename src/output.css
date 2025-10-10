@@ -408,11 +408,11 @@
   .h-\[396px\] {
     height: 396px;
   }
-  .h-\[750px\] {
-    height: 750px;
-  }
   .h-full {
     height: 100%;
+  }
+  .min-h-\[750px\] {
+    min-height: 750px;
   }
   .min-h-screen {
     min-height: 100vh;
