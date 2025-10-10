@@ -7,10 +7,10 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"npx tailwindcss -i ./src/input.css -o ./src/output.css --watch\" \"npx @11ty/eleventy --serve --watch\"",
-    "dev:network": "set ELEVENTY_HOST=0.0.0.0 && concurrently \"npx tailwindcss -i ./src/input.css -o ./src/output.css --watch\" \"npx @11ty/eleventy --serve --watch\"",
+    "dev": "concurrently \"tailwindcss -i ./src/input.css -o ./src/output.css --watch\" \"npx @11ty/eleventy --serve --watch\"",
+    "dev:network": "set ELEVENTY_HOST=0.0.0.0 && concurrently \"tailwindcss -i ./src/input.css -o ./src/output.css --watch\" \"npx @11ty/eleventy --serve --watch\"",
     "serve:network": "npm run build && node server.js",
-    "build": "npx tailwindcss -i ./src/input.css -o ./src/output.css && npx @11ty/eleventy"
+    "build": "tailwindcss -i ./src/input.css -o ./src/output.css && npx @11ty/eleventy"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",
