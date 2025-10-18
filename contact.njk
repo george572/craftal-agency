@@ -47,23 +47,23 @@
     gtag('config', 'G-D6MLEQNFCR');
 </script>
 <!-- Google tag (gtag.js) event - delayed navigation helper -->
+<!-- Event snippet for signup-kidev conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
 <script>
-  // Helper function to delay opening a URL until a gtag event is sent.
-  // Call it in response to an action that should navigate to a URL.
-  function gtagSendEvent(url) {
+  function gtag_report_conversion(url) {
     var callback = function () {
-      if (typeof url === 'string') {
-        window.location = window.location;
+      if (typeof(url) != 'undefined') {
+        window.location = url;
       }
     };
-    gtag('event', 'conversion_event_submit_lead_form', {
-      'event_callback': callback,
-      'event_timeout': 2000,
-      // <event_parameters>
+    gtag('event', 'conversion', {
+        'send_to': 'AW-10971053866/2rQRCMegm-cZEKr-s-8o',
+        'event_callback': callback
     });
     return false;
   }
-</script>
+  </script>
+  
 
   </head>
   <body>
@@ -149,7 +149,7 @@
                         <!-- Hidden submit button for Google Ads tracking -->
                         <button type="submit" id="hidden-submit" style="display: none;" aria-hidden="true"></button>
 
-                        <button type="submit" onclick="gtagSendEvent();" class="bg-primary text-white px-4 py-2 rounded-full w-full mt-6 cursor-pointer">Send Message</button>
+                        <button type="submit" onclick="gtag_report_conversion();" class="bg-primary text-white px-4 py-2 rounded-full w-full mt-6 cursor-pointer">Send Message</button>
                     </form>
                 </div>
               </div>
