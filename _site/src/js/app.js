@@ -280,11 +280,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Get form data
                 const formData = new FormData(contactForm);
                 
-                // Submit to Web3Forms
+                // Submit to Formspree
                 const response = await fetch(contactForm.action, {
                     method: 'POST',
-                    body: formData
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
                 });
+                
+                const data = await response.json();
                 
                 if (response.ok) {
                     // Trigger hidden submit button for Google Ads tracking
@@ -309,11 +314,14 @@ document.addEventListener('DOMContentLoaded', function() {
                         successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
                     }
                 } else {
-                    throw new Error('Form submission failed');
+                    // Log the error details for debugging
+                    console.error('Form submission failed:', data);
+                    throw new Error(data.error || 'Form submission failed');
                 }
                 
             } catch (error) {
                 console.error('Form submission error:', error);
+                console.error('Error details:', error.message);
                 
                 // Show error message but keep form visible
                 if (errorMessage) {
