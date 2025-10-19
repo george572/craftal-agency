@@ -323,7 +323,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
                         }
                     };
-                    
+                    console.log(typeof gtag);
                     if (typeof gtag !== 'undefined') {
                         console.log('gtag is defined');
                         gtag('event', 'conversion_event_submit_lead_form', {
