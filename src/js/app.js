@@ -311,21 +311,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 const data = await response.json();
                 
                 if (response.ok) {
-                    // Send gtag conversion event
+                    // Send gtag conversion event with callback
+                    const showSuccess = () => {
+                        // Success - hide form and show success message
+                        if (contactForm) {
+                            contactForm.style.display = 'none';
+                        }
+                        
+                        if (successMessage) {
+                            successMessage.classList.remove('hidden');
+                            successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        }
+                    };
+                    
                     if (typeof gtag !== 'undefined') {
                         gtag('event', 'conversion_event_submit_lead_form', {
+                            'event_callback': showSuccess,
                             'event_timeout': 2000
                         });
-                    }
-                    
-                    // Success - hide form and show success message
-                    if (contactForm) {
-                        contactForm.style.display = 'none';
-                    }
-                    
-                    if (successMessage) {
-                        successMessage.classList.remove('hidden');
-                        successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    } else {
+                        showSuccess();
                     }
                 } else {
                     // Log the error details for debugging
