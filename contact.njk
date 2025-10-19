@@ -35,6 +35,7 @@
     />
 
     <link href="/src/output.css" rel="stylesheet" type="text/css" />
+    <script src="https://www.google.com/recaptcha/api.js?render=6Le8R-UrAAAAAM-zt5ZgyGPSMKWipZiipsDBCIHW"></script>
     <script src="/src/js/app.js" defer type="text/javascript"></script>
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-D6MLEQNFCR">
@@ -119,7 +120,7 @@
                         <p class="mt-1">There was a problem sending your message. Please try again.</p>
                     </div>
 
-                    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                    <form id="contact-form" action="https://formspree.io/f/xgveklpq" method="POST">
                         <div class="flex flex-col gap-2">
                             <label for="name" class="text-[#373F51]">Full Name</label>
                             <input required type="text" id="name" name="name" placeholder="Name" class="h-[52px] border border-[#E3E3E3] outline-none rounded-lg p-2 px-4">
@@ -138,8 +139,6 @@
                             <label for="message" class="text-[#373F51]">Message</label>
                             <textarea required id="message" name="message" placeholder="Tell us a bit about your business" cols="30" rows="10" class="border border-[#E3E3E3] outline-none rounded-lg p-2 px-4"></textarea>
                         </div>
-                        <input type="hidden" name="access_key" value="59ea6535-bc67-4a34-be0d-d25831e389a9">
-
                         <button type="submit" class="bg-primary text-white px-4 py-2 rounded-full w-full mt-6 cursor-pointer" onclick="sendGtagConversion()">Send Message</button>
                     </form>
                 </div>

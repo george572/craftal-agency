@@ -280,7 +280,26 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Get form data
                 const formData = new FormData(contactForm);
                 
-                // Submit to Web3Forms
+                // Execute reCAPTCHA v3 and get token
+                try {
+                    const token = await new Promise((resolve, reject) => {
+                        if (typeof grecaptcha === 'undefined') {
+                            reject(new Error('reCAPTCHA not loaded'));
+                            return;
+                        }
+                        grecaptcha.ready(() => {
+                            grecaptcha.execute('6Le8R-UrAAAAAM-zt5ZgyGPSMKWipZiipsDBCIHW', {action: 'submit'})
+                                .then(resolve)
+                                .catch(reject);
+                        });
+                    });
+                    formData.append('g-recaptcha-response', token);
+                } catch (recaptchaError) {
+                    console.error('reCAPTCHA error:', recaptchaError);
+                    throw new Error('reCAPTCHA verification failed. Please refresh the page and try again.');
+                }
+                
+                // Submit to Formspree
                 const response = await fetch(contactForm.action, {
                     method: 'POST',
                     body: formData,
