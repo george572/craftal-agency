@@ -311,16 +311,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 const data = await response.json();
                 
                 if (response.ok) {
-                    // Trigger hidden submit button for Google Ads tracking
-                    const hiddenSubmit = document.getElementById('hidden-submit');
-                    if (hiddenSubmit) {
-                        // Temporarily remove event listener to allow default form submission
-                        contactForm.removeEventListener('submit', handleFormSubmit);
-                        hiddenSubmit.click();
-                        // Re-add the event listener for future submissions
-                        setTimeout(() => {
-                            contactForm.addEventListener('submit', handleFormSubmit);
-                        }, 100);
+                    // Send gtag conversion event
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'conversion_event_submit_lead_form', {
+                            'event_timeout': 2000
+                        });
                     }
                     
                     // Success - hide form and show success message
