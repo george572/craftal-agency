@@ -293,9 +293,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 if (response.ok) {
                     // Send gtag conversion event
-                    if (typeof sendGtagConversion !== 'undefined') {
-                        sendGtagConversion();
-                    }
                     
                     // Success - hide form and show success message
                     if (contactForm) {
