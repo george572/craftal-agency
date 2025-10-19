@@ -325,6 +325,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     };
                     
                     if (typeof gtag !== 'undefined') {
+                        console.log('gtag is defined');
                         gtag('event', 'conversion_event_submit_lead_form', {
                             'event_callback': showSuccess,
                             'event_timeout': 2000
