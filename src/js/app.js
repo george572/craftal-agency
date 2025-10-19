@@ -299,7 +299,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     throw new Error('reCAPTCHA verification failed. Please refresh the page and try again.');
                 }
                 
-                // Submit to Formspree
+                // Submit to Web3Forms
                 const response = await fetch(contactForm.action, {
                     method: 'POST',
                     body: formData,
