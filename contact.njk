@@ -35,31 +35,35 @@
     />
 
     <link href="/src/output.css" rel="stylesheet" type="text/css" />
-    <script src="https://www.google.com/recaptcha/api.js?render=6Le8R-UrAAAAAM-zt5ZgyGPSMKWipZiipsDBCIHW"></script>
     <script src="/src/js/app.js" defer type="text/javascript"></script>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D6MLEQNFCR"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y1CY4B2GRR">
 </script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-    gtag('config', 'G-D6MLEQNFCR');
+  gtag('config', 'G-Y1CY4B2GRR');
 </script>
 <!-- Google tag (gtag.js) event - delayed navigation helper -->
-<!-- Event snippet for signup-kidev conversion page
-In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
 <script>
-  function gtag_report_conversion() {
-    gtag('event', 'conversion', {
-        'send_to': 'AW-10971053866/2rQRCMegm-cZEKr-s-8o',
-        'event_callback': ""
+  // Helper function to delay opening a URL until a gtag event is sent.
+  // Call it in response to an action that should navigate to a URL.
+  function gtagSendEvent(url) {
+    var callback = function () {
+      if (typeof url === 'string') {
+        window.location = window.location;
+      }
+    };
+    gtag('event', 'conversion_event_submit_lead_form', {
+      'event_callback': callback,
+      'event_timeout': 2000,
+      // <event_parameters>
     });
     return false;
   }
-  </script>
-  
+</script>
 
   </head>
   <body>
@@ -121,7 +125,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                         <p class="mt-1">There was a problem sending your message. Please try again.</p>
                     </div>
 
-                    <form id="contact-form" action="https://formspree.io/f/mqaynvvg" method="POST">
+                    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
                         <div class="flex flex-col gap-2">
                             <label for="name" class="text-[#373F51]">Full Name</label>
                             <input required type="text" id="name" name="name" placeholder="Name" class="h-[52px] border border-[#E3E3E3] outline-none rounded-lg p-2 px-4">
@@ -140,11 +144,12 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
                             <label for="message" class="text-[#373F51]">Message</label>
                             <textarea required id="message" name="message" placeholder="Tell us a bit about your business" cols="30" rows="10" class="border border-[#E3E3E3] outline-none rounded-lg p-2 px-4"></textarea>
                         </div>
+                        <input type="hidden" name="access_key" value="60b41987-1e80-40ce-aaae-6934321d82ea">
                         
                         <!-- Hidden submit button for Google Ads tracking -->
                         <button type="submit" id="hidden-submit" style="display: none;" aria-hidden="true"></button>
-                        
-                        <button type="submit" onclick="gtag_report_conversion()" class="bg-primary text-white px-4 py-2 rounded-full w-full mt-6 cursor-pointer">Send Message</button>
+
+                        <button type="submit" onclick="gtagSendEvent();" class="bg-primary text-white px-4 py-2 rounded-full w-full mt-6 cursor-pointer">Send Message</button>
                     </form>
                 </div>
               </div>
