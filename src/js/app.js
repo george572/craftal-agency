@@ -311,27 +311,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 const data = await response.json();
                 
                 if (response.ok) {
-                    // Send gtag conversion event with callback
-                    const showSuccess = () => {
-                        // Success - hide form and show success message
-                        if (contactForm) {
-                            contactForm.style.display = 'none';
-                        }
-                        
-                        if (successMessage) {
-                            successMessage.classList.remove('hidden');
-                            successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        }
-                    };
-                    console.log(typeof gtag);
-                    if (typeof gtag !== 'undefined') {
-                        console.log('gtag is defined');
-                        gtag('event', 'conversion_event_submit_lead_form', {
-                            'event_callback': showSuccess,
-                            'event_timeout': 2000
-                        });
-                    } else {
-                        showSuccess();
+                    // Send gtag conversion event
+                    if (typeof sendGtagConversion !== 'undefined') {
+                        sendGtagConversion();
+                    }
+                    
+                    // Success - hide form and show success message
+                    if (contactForm) {
+                        contactForm.style.display = 'none';
+                    }
+                    
+                    if (successMessage) {
+                        successMessage.classList.remove('hidden');
+                        successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
                     }
                 } else {
                     // Log the error details for debugging
