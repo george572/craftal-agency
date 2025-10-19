@@ -280,26 +280,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Get form data
                 const formData = new FormData(contactForm);
                 
-                // Execute reCAPTCHA v3 and get token
-                try {
-                    const token = await new Promise((resolve, reject) => {
-                        if (typeof grecaptcha === 'undefined') {
-                            reject(new Error('reCAPTCHA not loaded'));
-                            return;
-                        }
-                        grecaptcha.ready(() => {
-                            grecaptcha.execute('6Le8R-UrAAAAAM-zt5ZgyGPSMKWipZiipsDBCIHW', {action: 'submit'})
-                                .then(resolve)
-                                .catch(reject);
-                        });
-                    });
-                    formData.append('g-recaptcha-response', token);
-                } catch (recaptchaError) {
-                    console.error('reCAPTCHA error:', recaptchaError);
-                    throw new Error('reCAPTCHA verification failed. Please refresh the page and try again.');
-                }
-                
-                // Submit to Formspree
+                // Submit to Web3Forms
                 const response = await fetch(contactForm.action, {
                     method: 'POST',
                     body: formData,
@@ -311,27 +292,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 const data = await response.json();
                 
                 if (response.ok) {
-                    // Send gtag conversion event with callback
-                    const showSuccess = () => {
-                        // Success - hide form and show success message
-                        if (contactForm) {
-                            contactForm.style.display = 'none';
-                        }
-                        
-                        if (successMessage) {
-                            successMessage.classList.remove('hidden');
-                            successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        }
-                    };
-                    console.log(typeof gtag);
-                    if (typeof gtag !== 'undefined') {
-                        console.log('gtag is defined');
-                        gtag('event', 'conversion_event_submit_lead_form', {
-                            'event_callback': showSuccess,
-                            'event_timeout': 2000
-                        });
-                    } else {
-                        showSuccess();
+                    // Send gtag conversion event
+                    
+                    // Success - hide form and show success message
+                    if (contactForm) {
+                        contactForm.style.display = 'none';
+                    }
+                    
+                    if (successMessage) {
+                        successMessage.classList.remove('hidden');
+                        successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
                     }
                 } else {
                     // Log the error details for debugging
