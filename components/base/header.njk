@@ -8,22 +8,21 @@
             </a>
         </div>
         <nav class="hidden md:flex items-center gap-8 text-[#515A6E] font-medium text-[14px]">
-            <a href="/about/" class="{% if page.url == '/about/' %}text-primary{% endif %}">About</a>
+            {# <a href="/about/" class="{% if page.url == '/about/' %}text-primary{% endif %}">About</a> #}
             <div class="menuItem flex items-center gap-1 group relative">
-                <span class="flex items-center gap-1 cursor-pointer">
+                {# <span class="flex items-center gap-1 cursor-pointer">
                     <span class="{% if page.url == '/ecommerce/' or page.url == '/landing-page/' or page.url == '/website-redesign/' %}text-primary{% endif %}">Services</span>
                     <img src="../../src/images/chevron-down.svg" alt="Arrow Down" class="arrow w-4 h-4 transition-transform duration-180">
-                </span>
+                </span> #}
                 {# dropdown menu #}
-                <div class="dropdown hidden text-[14px] w-[150px] absolute bg-white shadow-sm rounded-md px-2 py-3 -left-5 -bottom-35 z-50
+                {# <div class="dropdown hidden text-[14px] w-[150px] absolute bg-white shadow-sm rounded-md px-2 py-3 -left-5 -bottom-35 z-50
                         opacity-0 transition-opacity duration-200 flex-col">
                     <a href="/ecommerce/" class="pb-3">E-commerce Site</a>
                     <a href="/landing-page/" class="pb-3">Landing Page</a>
                     <a href="/website-redesign/" class="pb-1">Website Redesign</a>
                     <div class="bg-primary h-[7px] absolute w-full left-0 bottom-0 rounded-bl-md rounded-br-md"></div>
-                </div>
+                </div> #}
             </div>
-            <a href="/pricing/" class="{% if page.url == '/pricing/' %}text-primary{% endif %}">Pricing</a>
             <a href="/contact/" class="{% if page.url == '/contact/' %}text-primary{% endif %}">Contact Us</a>
         </nav>
         <a
@@ -74,7 +73,6 @@
                                 <div class="decoration hidden bg-primary h-[7px] absolute w-full left-0 bottom-0 rounded-bl-md rounded-br-md"></div>
                             </div>
                         </div>
-                        <a href="/pricing/" class="{% if page.url == '/pricing/' %}text-primary {% endif %}">Pricing</a>
                         <a href="/contact/" class="{% if page.url == '/contact/' %}text-primary {% endif %}">Contact Us</a>
                     </div>
                     <a
